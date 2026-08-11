@@ -1,0 +1,15 @@
+/gitea
+/app.ini
+/gitea.db*
+/data/
+/log/
+/repos/
+/custom/
+/backups/
+/.env
+/.internal_token
+/.secret_key
+*.pem
+*.key
+*.bak
+*.tmp

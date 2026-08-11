@@ -1,0 +1,14 @@
+[Unit]
+Description=Gitea Standalone
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=__WORK_DIR__
+ExecStart=__WORK_DIR__/gitea web --config __WORK_DIR__/app.ini
+Restart=on-failure
+RestartSec=5
+Environment=GITEA_WORK_DIR=__WORK_DIR__
+
+[Install]
+WantedBy=default.target

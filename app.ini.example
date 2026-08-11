@@ -1,0 +1,35 @@
+APP_NAME = Gitea Standalone
+RUN_USER = __RUN_USER__
+RUN_MODE = prod
+WORK_PATH = __WORK_DIR__
+
+[security]
+INSTALL_LOCK = true
+SECRET_KEY = __SECRET_KEY__
+INTERNAL_TOKEN = __INTERNAL_TOKEN__
+
+[service]
+DISABLE_REGISTRATION = true
+
+[server]
+PROTOCOL = http
+HTTP_ADDR = 0.0.0.0
+HTTP_PORT = 3000
+DOMAIN = __DOMAIN__
+ROOT_URL = http://__DOMAIN__:3000/
+START_SSH_SERVER = false
+
+[database]
+DB_TYPE = sqlite3
+PATH = __WORK_DIR__/gitea.db
+
+[repository]
+ROOT = __WORK_DIR__/repos
+
+[log]
+MODE = console,file
+LEVEL = Info
+ROOT_PATH = __WORK_DIR__/log
+
+[oauth2]
+JWT_SECRET = __JWT_SECRET__
